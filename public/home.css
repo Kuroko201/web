@@ -1,0 +1,27 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.center{
+    font-size: 20px;
+    display: block;
+    padding: 20px;
+    border-radius: 10px;
+    border-style: solid;
+    margin-top: 10px;
+    text-align: left;
+    
+    
+}
+
+.login_title{
+  text-align: center;
+}
+h1 {
+    color: blue;
+    font-family: Arial, sans-serif;
+}

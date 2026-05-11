@@ -1,0 +1,49 @@
+<!-- Home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+  
+   <form action="/login" method="POST">
+    <div class = "container">
+            <div class = "center">
+                <div class = "login_title">
+                    <h2>Login</h2>
+                </div>
+                <div class = "inputform">
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" placeholder="Enter username"><br>
+                        <% if (typeof usernameError !== 'undefined' && usernameError) { %>
+                        <p style="color: red; text-align: left; font-size: 15px; margin: 0;"><%= usernameError %></p>
+                        <% } %>
+                  
+                    <br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" placeholder="Enter password"><br>
+                        <% if (typeof passwordError !== 'undefined' && passwordError) { %>
+                        <p style="color: red; text-align: left; font-size: 15px; margin: 0;"><%= passwordError %></p>
+                        <% } %>
+                </div>
+                <br>
+                <div class = "login_button">
+                    <button type="submit">Login</button> 
+                </div>
+            </div>
+
+    </div>
+    </form>
+    <p><a href="http://localhost:8000/test">Redirect</a></p>
+
+    <script>
+      
+    </script>
+
+</body>
+</html>  

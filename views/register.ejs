@@ -1,0 +1,50 @@
+<!-- Home.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    
+    <title>Home Page</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+   <form action="/register" method="POST">
+    <div class = "container">
+            <div class = "center">
+                <div class = "login_title">
+                    <h2>Register</h2>
+                </div>
+                <div class = "inputform">
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" placeholder="Enter username"><br>
+                        <% if (typeof Null_name_Error !== 'undefined' && Null_name_Error) { %>
+                        <p style="color: red; text-align: left; font-size: 15px; margin: 0;"><%= Null_name_Error %></p>
+
+                        <% } else if (typeof duplicate_name_Error !== 'undefined' && duplicate_name_Error) { %>
+                        <p style="color: red; text-align: left; font-size: 15px; margin: 0;"><%= duplicate_name_Error %></p>
+                        <% } %>
+                        
+                    <br>
+                    <label for="username">Password:</label><br>
+                    <input type="password" id="password" name="password" placeholder="Enter password"><br>
+                        <% if (typeof Null_password_Error !== 'undefined' && Null_password_Error) { %>
+                        <p style="color: red; text-align: left; font-size: 15px; margin: 0;"><%= Null_password_Error %></p>
+                        <% } %>
+                        
+                </div>
+                <br>
+                <div class = "login_button">
+                    <button type="submit">Create</button> 
+                </div>
+            </div>
+
+    </div>
+    </form>
+    <p><a href="http://localhost:8000/test">Redirect</a></p>
+    <script>
+       
+    </script>
+</body>
+</html>  
