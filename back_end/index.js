@@ -57,7 +57,7 @@ app.get('/register', function (req, res) {
        res.render('register');
 })
 
-app.post('/register', async (req, res)=>{ // <form action="/login" method="POST"></form>
+app.post('/register', async (req, res)=>{ // <form action="/register" method="POST"></form>
        const username = req.body.username;
        const password = req.body.password;
        if (username === "" && password === "" ){      
@@ -132,7 +132,7 @@ app.post('/login', loginLimiter, async(req,res)=>{
 app.get('/home_page', login_authentication, (req,res)=>{
        console.log(req.user)
 
-       res.render('home_page', req.user);
+       res.render('home_page', req.user); //req.user is a object, use in home_page.ejs <%= req.user["username"] %>
 })
 
 app.get('/logout',(req,res)=>{
