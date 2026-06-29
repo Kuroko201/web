@@ -57,7 +57,7 @@ app.get('/register', function (req, res) {
        res.render('register');
 })
 
-app.post('/register', async (req, res)=>{ // <form action="/register" method="POST"></form>
+app.post('/register', async (req, res)=>{ // <form action="/register" method="POST"></form> abcd abcd abcd
        const username = req.body.username;
        const password = req.body.password;
        if (username === "" && password === "" ){      
